@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { Outlet } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,8 +53,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
   return (
-    <Box sx={{ flexGrow: 1,backgroundColor:"blueviolet" }}>
-      <AppBar position="static" sx={{ backgroundColor: 'darkblue' }}>
+    <Box sx={{ flexGrow: 1,backgroundColor:"gray" }}>
+      <AppBar position="static" sx={{ backgroundColor: 'gray' }}>
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -65,7 +66,7 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton> */}
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="div"
             sx={{
@@ -88,6 +89,8 @@ export default function SearchAppBar() {
           </Search>
         </Toolbar>
       </AppBar>
+      <Outlet/>
     </Box>
+    
   );
 }

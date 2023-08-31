@@ -22,7 +22,7 @@ const MovieCard = ({ movie }) => {
     <Card
       sx={{
         maxWidth: 600,
-        height: "100%", // Set a consistent height
+        height: "100%", 
         display: "flex",
         flexDirection: "column",
       }}
