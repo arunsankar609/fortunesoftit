@@ -15,7 +15,7 @@ const MovieCard = ({ movie }) => {
     length,
     released_on,
     poster,
-    backdrop,
+
   } = movie;
 
   return (

@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 const SmallMovieCard = ({ movie }) => {
   const {
     title,
-    overview,
     genres,
     imdb_rating,
     director,
@@ -15,7 +14,6 @@ const SmallMovieCard = ({ movie }) => {
     length,
     released_on,
     poster,
-    backdrop,
   } = movie;
 
   return (

@@ -7,6 +7,7 @@ import {
 import Body from './components/Body';
 import SearchAppBar from './components/Header';
 import MoviesLists from './components/MoviesLists';
+import MovieDetails from './components/MovieDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +16,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <MoviesLists />,
+      },
+       {
+        path: "/myDesign",
+        element: <Body />,
+      },
+       {
+        path: "/movieDetails/:id",
+        element: <MovieDetails />,
       },
     ],
   },

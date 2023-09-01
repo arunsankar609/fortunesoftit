@@ -1,8 +1,8 @@
 import { Container, Grid, Paper, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import MovieCard from "./reusables/Cards";
 import SmallMovieCard from "./reusables/MovieCard";
+import { Link } from "react-router-dom";
 
 const MoviesLists = () => {
   const [moviesList, setMoviesList] = useState([]);
@@ -66,7 +66,7 @@ const MoviesLists = () => {
                   .filter((movie) => movie.genres.includes(genre))
                   .map((movie) => (
                     <Grid item key={movie.id} spacing={2}>
-                      <div
+                     <Link to={`/movieDetails/`+movie.id} style={{ textDecoration: "none" }}> <div
                     style={{
                     
                       position: "relative",
@@ -82,7 +82,7 @@ const MoviesLists = () => {
                     }}
                   >
                     <SmallMovieCard movie={movie} />
-                  </div>
+                  </div></Link>
                     </Grid>
                   ))}
               </Grid>
